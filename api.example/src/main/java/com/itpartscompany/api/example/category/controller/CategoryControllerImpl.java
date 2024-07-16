@@ -15,12 +15,12 @@ import java.util.Optional;
 @RequestMapping("/api/categories")
 public class CategoryControllerImpl implements CategoryController {
 
-
     @Autowired
     private CategoryService categoryService;
 
     @Override
-    @GetMapping/*("/getAll")*///igual que localhost:8080/api/categories/...(---getAll---)
+    @GetMapping({"","/"})
+    /*("/getAll")*///igual que localhost:8080/api/categories/...(---getAll---)
     public ResponseEntity<List<Category>> getAllCategories() {
         return ResponseEntity.ok(categoryService.getAllCategories());
     }
